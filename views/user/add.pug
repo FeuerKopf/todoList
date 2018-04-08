@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title Ajouter un TODO
+  body.container
+    form(method='POST', action='/todos/add')
+      input(type='user', name='user', placeholder='user', value=''+todo.user)
+      input(type='message', name='message', placeholder='message', value=''+todo.message)
+      input(type='completion', name='completion', placeholder='completion', value=''+todo.completion)
+      input(type='hidden', name='id', value=''+todo.id)
+      button(type='submit') Valider
